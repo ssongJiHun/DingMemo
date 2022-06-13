@@ -1,0 +1,79 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:layout_below="@+id/toolbar" >
+
+    <LinearLayout
+        android:id="@+id/HaveListView"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:background="#eeeeee"
+        android:orientation="vertical" >
+
+        <ListView
+            android:id="@+id/MianListView"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:choiceMode="singleChoice"
+            android:scrollbars="none" >
+        </ListView>
+    </LinearLayout>
+
+    <RelativeLayout
+        android:id="@+id/NotListView"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_centerInParent="true" >
+
+        <ImageView
+            android:id="@+id/TalkImageView"
+            android:layout_width="80dp"
+            android:layout_height="80dp"
+            android:layout_centerHorizontal="true"
+            android:src="@drawable/empty_ico" />
+
+        <TextView
+            android:id="@+id/TalkTextView1"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_below="@+id/TalkImageView"
+            android:layout_centerHorizontal="true"
+            android:layout_marginTop="15dp"
+            android:gravity="center"
+            android:singleLine="true"
+            android:text="이런!.. 메모가 텅텅 비었습니다."
+            android:textColor="#727272"
+            android:textSize="14dp" />
+
+        <TextView
+            android:id="@+id/TalkTextView2"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_below="@+id/TalkTextView1"
+            android:layout_centerHorizontal="true"
+            android:layout_marginTop="5dp"
+            android:gravity="center"
+            android:singleLine="true"
+            android:text="추가 하려면 오른쪽 하단에 더하기 버튼을 눌러주세요."
+            android:textColor="#8d8d8d"
+            android:textSize="12dp" />
+    </RelativeLayout>
+
+    <ImageButton
+        android:id="@+id/floatingButton"
+        android:layout_width="56dp"
+        android:layout_height="56dp"
+        android:layout_alignParentBottom="true"
+        android:layout_alignParentRight="true"
+        android:layout_marginBottom="24dp"
+        android:layout_marginRight="16dp"
+        android:background="@drawable/fab_ripple"
+        android:elevation="3dp"
+        android:src="@drawable/plus_ico"
+        android:stateListAnimator="@anim/button_elevation"
+        android:tint="@android:color/white" 
+        tools:ignore="RtlCompat"/>
+
+</RelativeLayout>
